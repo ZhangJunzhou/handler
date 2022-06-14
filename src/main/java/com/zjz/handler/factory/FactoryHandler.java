@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 public class FactoryHandler {
     public static GatewayHandler getFirstGatewayHandler() {
+        // 用于维持几个handler的执行顺序
         GatewayHandler gatewayHandler1 = new CurrentLimitHandler();
         GatewayHandler gatewayHandler2 = new BlacklistHandler();
         gatewayHandler1.setNextGatewayHandler(gatewayHandler2);
