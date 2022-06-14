@@ -20,6 +20,7 @@ public class FactoryHandler {
         gatewayHandler1.setNextGatewayHandler(gatewayHandler2);
         GatewayHandler gatewayHandler3 = new ConversationHandler();
         gatewayHandler2.setNextGatewayHandler(gatewayHandler3);
+        System.out.println("dev环境测试代码");
         return gatewayHandler1;
     }
 
